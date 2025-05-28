@@ -1,0 +1,259 @@
+:root{
+  --main-color:#E5F5FF;
+}
+
+
+/* Container with max-width 1220px, centered and responsive */
+.container-1220 {
+  max-width: 1220px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+/* Basic page and layout styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* no page scroll */
+  background: #E5F5FF;
+}
+.icons{
+  font-size: 18px;
+}
+
+.page-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top navbar: full width background, content constrained */
+.top-navbar {
+  background-color: #212529; /* dark background */
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+
+/* Main navbar: full width background */
+.main-navbar {
+  background-color: #fff;
+  box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+  position: relative;
+}
+
+/* Hero section fills remaining space, flex-centered */
+.hero-fullscreen {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  color: #000;
+  background: none;
+  width: 100%;
+}
+
+/* Hero content constrained */
+.hero-content {
+  max-width: 1220px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+}
+
+/* Carousel container - responsive width, centered, pinned bottom */
+.carousel-container {
+  max-width: 1220px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  padding: 10px 0;
+  background-color: transparent;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+/* Carousel track wrapper - double width for looping */
+.carousel-track-wrapper {
+  display: flex;
+  width: 200%;
+  animation: scroll-left 20s linear infinite;
+}
+
+/* Each track flex and icons spaced */
+.carousel-track {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Carousel icons styling */
+.carousel-track i {
+  font-size: 1.8rem;
+  margin: 0 20px;
+  color: #0d6efd;
+}
+
+/* Animation to scroll carousel from left to right */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive tweaks */
+/* Smaller icon size on small screens */
+@media (max-width: 576px) {
+  .carousel-track i {
+    font-size: 1.3rem;
+    margin: 0 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar-secound {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.row-secound {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.mobile-only{
+  display: none;
+}
+
+/* Default: show buttons, hide icons */
+
+/* Responsive styles */
+@media (max-width: 768px) {
+.nav-links {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #0B87D7;
+  flex-direction: column;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition:  0.4s ease-in-out, padding 0.3s ease-in-out;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* No padding when closed */
+  opacity: 0;
+  pointer-events: none; /* Prevent clicks when hidden */
+}
+
+  .nav-links.open {
+  max-height: 400px;
+  padding: 2rem 0;
+  opacity: 1;
+  pointer-events: auto;
+}
+  .nav-links li a {
+    
+    color:#000000;
+  }
+  .mobile-only{
+    display: block;
+    font-size: 23px;
+    gap:5px;
+
+    
+  }
+  .icons-img img{
+    margin-top: -5px;
+    height: 23px;
+    width: 18px;
+  }
+.desktop-only{
+  display: none;
+  
+}
+
+  .hamburger {
+    display: block;
+  }
+}
