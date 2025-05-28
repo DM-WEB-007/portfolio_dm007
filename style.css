@@ -45,29 +45,41 @@ html, body {
   position: relative;
 }
 
-/* Hero section fills remaining space, flex-centered */
+
+/* Desktop / default: side-by-side */
 .hero-fullscreen {
-  flex: 1 1 auto;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
-  padding: 2rem;
-  position: relative;
-  overflow: hidden;
-  color: #000;
-  background: none;
-  width: 100%;
+  min-height: 90vh;
 }
 
-/* Hero content constrained */
-.hero-content {
-  max-width: 1220px;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 2;
+/* Mobile / small screens: stack vertically, image on top */
+@media (max-width: 768px) {
+  .hero-fullscreen {
+    flex-direction: column; /* stack vertically */
+    align-items: center;
+    min-height: auto; /* optional */
+  }
+
+  .hero-right {
+    order: -1; /* move image first */
+    max-width: 50%; /* optional smaller width */
+    min-width: auto;
+    
+  }
+
+  .hero-left {
+    max-width: 100%;
+    min-width: auto;
+    text-align: center; /* optional center text on mobile */
+  }
 }
+
+
+
+/* Hero content constrained */
+
 
 /* Carousel container - responsive width, centered, pinned bottom */
 .carousel-container {
@@ -143,18 +155,6 @@ html, body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 .navbar-secound {
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -207,9 +207,7 @@ html, body {
     height: 23px;
     width: 18px;
   }
-  .desktop-only {
-    display: none;
-  }
+ 
 
 /* Default: show buttons, hide icons */
 
@@ -241,7 +239,9 @@ html, body {
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* full width border */
   }
-
+ .desktop-only {
+    display: none;
+  }
 
   .nav-links li a {
     color: #000000;
@@ -258,3 +258,35 @@ html, body {
     display: block;
   }
 }
+
+
+
+
+
+
+
+
+
+
+  .typing-cursor {
+    display: inline-block;
+    animation: blink 0.7s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  @media (max-width: 768px) {
+    .hero-fullscreen {
+      flex-direction: column;
+      text-align: center;
+    }
+    .hero-left, .hero-right {
+      max-width: 100% !important;
+    }
+    .hero-right {
+      margin-top: 2rem;
+    }
+  }

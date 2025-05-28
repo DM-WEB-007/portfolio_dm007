@@ -7,15 +7,20 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
 </head>
 <body>
 
   <div class="page-container">
 
 <!-- Top Navbar -->
-<!-- Top Navbar - hidden on small/mobile -->
 <nav class="navbar navbar-dark py-1 top-navbar d-none d-md-flex" style="background-color: #E5F5FF;">
   <div class="container-1220 d-flex justify-content-between align-items-center">
     <div class="text-dark small fw-semibold">
@@ -29,12 +34,10 @@
       <a href="#" class="me-3"><i class="fab fa-telegram"></i></a>
       <a href="#" class="me-3"><i class="fab fa-whatsapp"></i></a>
       <a href="#" class=""><i class="fab fa-linkedin-in"></i></a>
-     
     </div>
   </div>
 </nav>
 
-<!-- Main Navbar -->
 <!-- Main Navbar -->
 <nav class="navbar-secound">
   <div class="row-secound">
@@ -48,75 +51,75 @@
     </ul>
 
     <div class="d-flex gap-4 align-items-center action-buttons">
-      
       <button type="button" class="btn btn-outline-primary desktop-only">Contact</button>
       <button type="button" class="btn btn-primary desktop-only">Ready Project</button>
 
-     
       <a href="#" class="text-dark mobile-only"><i class="fa-brands fa-square-youtube"></i></a>
       <a href="#" class="text-dark mobile-only"><i class="fa-brands fa-telegram"></i></a>
-      <a href="#" class="text-dark mobile-only icons-img"><img src="img/logo.png" alt="" ></a>
+      <a href="#" class="text-dark mobile-only icons-img"><img src="img/logo.png" alt=""></a>
     </div>
-    
-<div class="hamburger" id="hamburger">
-  <i class="fas fa-bars" id="menu-icon"></i>
-</div>
 
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars" id="menu-icon"></i>
+    </div>
   </div>
 </nav>
 
-
-
-
-
-    <!-- Hero Section -->
-    <section class="hero-fullscreen">
-      <div class="hero-content">
-        <h1 class="display-4 fw-bold">Welcome to BrandName</h1>
-        <p class="lead">We offer amazing solutions to help you grow your business.</p>
-        <a href="#services" class="btn btn-light btn-lg mt-3">Explore Services</a>
-      </div>
-
-      <!-- Carousel -->
-      <div class="carousel-container">
-        <div class="carousel-track-wrapper">
-          <!-- Original Icons -->
-          <div class="carousel-track">
-            <i class="fab fa-html5"></i>
-            <i class="fab fa-css3-alt"></i>
-            <i class="fab fa-js-square"></i>
-            <i class="fab fa-react"></i>
-            <i class="fab fa-angular"></i>
-            <i class="fab fa-vuejs"></i>
-            <i class="fab fa-node-js"></i>
-            <i class="fab fa-php"></i>
-            <i class="fab fa-laravel"></i>
-            <i class="fab fa-python"></i>
-            <i class="fab fa-java"></i>
-            <i class="fab fa-github"></i>
-          </div>
-          <!-- Duplicate for seamless loop -->
-          <div class="carousel-track">
-            <i class="fab fa-html5"></i>
-            <i class="fab fa-css3-alt"></i>
-            <i class="fab fa-js-square"></i>
-            <i class="fab fa-react"></i>
-            <i class="fab fa-angular"></i>
-            <i class="fab fa-vuejs"></i>
-            <i class="fab fa-node-js"></i>
-            <i class="fab fa-php"></i>
-            <i class="fab fa-laravel"></i>
-            <i class="fab fa-python"></i>
-            <i class="fab fa-java"></i>
-            <i class="fab fa-github"></i>
-          </div>
-        </div>
-      </div>
-    </section>
-
+<!-- Hero Section -->
+<section class="hero-fullscreen container-1220 d-flex justify-content-between align-items-center" style="min-height: 90vh;">
+  <div class="hero-left" style="max-width: 50%; min-width: 300px;">
+    <p class="text-primary fw-semibold mb-2">Hello there!</p>
+    <h1 class="display-3 fw-bold mb-3">DM RAIHAN</h1>
+    <h4 class="mb-4">
+      I am a
+      <span id="typing-text" style="color: #007bff; font-weight: 600;"></span>
+      <span class="typing-cursor">|</span>
+    </h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non deleniti error fugit tempora quos quis ullam, eaque corrupti veniam id saepe hic molestias, dolores quidem facere quod labore neque aliquam?</p>
+    <a href="#services" class="btn btn-primary btn-lg">Click here</a>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+  <div class="hero-right" style="max-width: 30%; min-width: 250px;">
+    <img src="img/dp.png" alt="DM RAIHAN" class="img-fluid rounded" />
+  </div>
+  <!-- Carousel -->
+  <div class="carousel-container">
+    <div class="carousel-track-wrapper">
+      <div class="carousel-track">
+        <i class="fab fa-html5"></i>
+        <i class="fab fa-css3-alt"></i>
+        <i class="fab fa-js-square"></i>
+        <i class="fab fa-react"></i>
+        <i class="fab fa-angular"></i>
+        <i class="fab fa-vuejs"></i>
+        <i class="fab fa-node-js"></i>
+        <i class="fab fa-php"></i>
+        <i class="fab fa-laravel"></i>
+        <i class="fab fa-python"></i>
+        <i class="fab fa-java"></i>
+        <i class="fab fa-github"></i>
+      </div>
+      <div class="carousel-track">
+        <i class="fab fa-html5"></i>
+        <i class="fab fa-css3-alt"></i>
+        <i class="fab fa-js-square"></i>
+        <i class="fab fa-react"></i>
+        <i class="fab fa-angular"></i>
+        <i class="fab fa-vuejs"></i>
+        <i class="fab fa-node-js"></i>
+        <i class="fab fa-php"></i>
+        <i class="fab fa-laravel"></i>
+        <i class="fab fa-python"></i>
+        <i class="fab fa-java"></i>
+        <i class="fab fa-github"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
