@@ -46,44 +46,62 @@ html, body {
 }
 
 
-/* Desktop / default: side-by-side */
+/* Mobile / small screens: stack vertically, image on top */
+/* Default (desktop) */
 .hero-fullscreen {
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 90vh;
+  padding: 2rem 1rem;
 }
 
-/* Mobile / small screens: stack vertically, image on top */
-@media (max-width: 768px) {
-  .hero-fullscreen {
-    flex-direction: column; /* stack vertically */
-    align-items: center;
-    min-height: auto; /* optional */
+  .typing-cursor {
+    display: inline-block;
+    animation: blink 0.7s infinite;
   }
 
-  .hero-right {
-    order: -1; /* move image first */
-    max-width: 50%; /* optional smaller width */
-    min-width: auto;
-    
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+@media (max-width: 768px) {
+  .hero-fullscreen {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    min-height: 80vh;
+    text-align: center;
   }
 
   .hero-left {
     max-width: 100%;
-    min-width: auto;
-    text-align: center; /* optional center text on mobile */
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-right {
+    order: -1;
+    max-width: 220px;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-right img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
 }
 
 
 
-/* Hero content constrained */
-
 
 /* Carousel container - responsive width, centered, pinned bottom */
 .carousel-container {
-  max-width: 1220px;
+
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -116,7 +134,7 @@ html, body {
 .carousel-track i {
   font-size: 1.8rem;
   margin: 0 20px;
-  color: #0d6efd;
+  color: #000;
 }
 
 /* Animation to scroll carousel from left to right */
@@ -130,15 +148,19 @@ html, body {
 }
 
 /* Responsive tweaks */
-/* Smaller icon size on small screens */
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .carousel-track i {
-    font-size: 1.3rem;
-    margin: 0 10px;
+    font-size: 1.4rem;
+    margin: 0 12px;
   }
 }
 
-
+@media (max-width: 576px) {
+  .carousel-track i {
+    font-size: 1.2rem;
+    margin: 0 8px;
+  }
+}
 
 
 
@@ -261,32 +283,3 @@ html, body {
 
 
 
-
-
-
-
-
-
-
-  .typing-cursor {
-    display: inline-block;
-    animation: blink 0.7s infinite;
-  }
-
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-  }
-
-  @media (max-width: 768px) {
-    .hero-fullscreen {
-      flex-direction: column;
-      text-align: center;
-    }
-    .hero-left, .hero-right {
-      max-width: 100% !important;
-    }
-    .hero-right {
-      margin-top: 2rem;
-    }
-  }
