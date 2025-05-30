@@ -48,11 +48,7 @@ html, body {
 }
 
 /* Main navbar: full width background */
-.main-navbar {
-  background-color: #fff;
-  box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
-  position: relative;
-}
+
 
 
 .navbar-secound {
@@ -299,9 +295,12 @@ html, body {
 
 
 
-
+.banner{
+  
+}
 .card {
   background-color: var(--secound-color);
+  
 }
 
 .card img {
@@ -342,4 +341,30 @@ html, body {
 
 .carousel-indicators .active {
   opacity: 1;
+}
+
+
+
+/* About */
+
+.custom-img {
+  width: 400px;
+  height: 450px;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.custom-vr {
+  width: 2px;
+  height: 295px;
+  background-color: var(--btn-one);
+}
+
+@media (max-width: 768px) {
+  .custom-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
 }

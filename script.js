@@ -19,6 +19,18 @@
   icon.classList.toggle("fa-times");
   });
 
+window.addEventListener('scroll', function () {
+  const topNavbar = document.querySelector('.top-navbar');
+  const secondNavbar = document.querySelector('.navbar-secound');
+
+  if (window.scrollY > 10) {
+    if (topNavbar) topNavbar.style.display = 'none'; // Hide on all screen sizes
+    secondNavbar.classList.add('fixed-top', 'shadow-sm');
+  } else {
+    if (topNavbar) topNavbar.style.display = ''; // Revert to original display
+    secondNavbar.classList.remove('fixed-top', 'shadow-sm');
+  }
+});
 
 
 // const roles = ["Youtuber", "Web Designer", "Freelancer", "Web Developer", "Content Creator"];
