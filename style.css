@@ -416,3 +416,79 @@ html, body {
     line-height: 1.1;
   }
 }
+
+
+
+
+
+
+
+
+
+.bubble-container {
+  display: flex;
+  align-items: flex-end; /* corrected */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem; /* 20px */
+  padding: 1rem;
+
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 60px;
+  overflow: hidden;
+  animation: float 10s linear infinite;
+  box-sizing: border-box;
+}
+
+.bubble {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  animation: bounce 4s ease-in-out infinite;
+  position: relative;
+  transition: transform 0.3s;
+  cursor: default;
+
+  font-size: clamp(0.7rem, 1.5vw, 1.2rem);
+}
+
+.bubble:hover {
+  transform: scale(1.1);
+}
+
+/* Unique sizes & colors */
+.html      { background: #e44d26; width: clamp(40px, 6vw, 60px);  height: clamp(40px, 6vw, 60px); }
+.css       { background: #f16529; width: clamp(60px, 8vw, 100px); height: clamp(60px, 8vw, 100px); }
+.js        { background: #b861e9; width: clamp(100px, 12vw, 160px); height: clamp(100px, 12vw, 160px); }
+.react     { background: #d9d65e; width: clamp(50px, 6vw, 90px);  height: clamp(50px, 6vw, 90px);  color: black; }
+.tailwind  { background: #e0564f; width: clamp(60px, 8vw, 100px); height: clamp(60px, 8vw, 100px); }
+.php       { background: #54d1c4; width: clamp(80px, 10vw, 130px); height: clamp(80px, 10vw, 130px); }
+.bootstrap { background: #55cbe8; width: clamp(60px, 8vw, 100px); height: clamp(60px, 8vw, 100px); color: black; }
+.laravel   { background: #529bd6; width: clamp(100px, 12vw, 160px); height: clamp(100px, 12vw, 160px); }
+.logo      { background: #756ae8; width: clamp(40px, 5vw, 80px);  height: clamp(40px, 5vw, 80px);  }
+.uiux      { background: #dc5aa0; width: clamp(100px, 12vw, 160px); height: clamp(100px, 12vw, 160px); }
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-15px); }
+}
+
+@media (max-width: 600px) {
+  .bubble-container {
+    gap: 0.75rem; /* smaller gap */
+    padding: 0.5rem;
+    border-radius: 30px;
+  }
+  .bubble {
+    font-size: 0.6rem; /* smaller font */
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px); } /* smaller bounce */
+  }
+}

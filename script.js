@@ -158,3 +158,9 @@ window.addEventListener('scroll', function () {
     }
     indicators.appendChild(indicator);
   }
+
+
+
+
+
+  
