@@ -432,7 +432,6 @@ html, body {
   flex-wrap: wrap;
   gap: 1.25rem; /* 20px */
   padding: 1rem;
-
   margin: 0 auto;
   background: #fff;
   border-radius: 60px;
@@ -492,3 +491,16 @@ html, body {
     50%      { transform: translateY(-8px); } /* smaller bounce */
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
