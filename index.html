@@ -18,11 +18,12 @@
 </head>
 <body>
 
+
   <div class="page-container">
 
 <!-- Top Navbar -->
 <nav class="navbar navbar-dark py-1 top-navbar d-none d-md-flex" style="background-color: #E5F5FF;">
-  <div class="container-1220 d-flex justify-content-between align-items-center">
+  <div class="container d-flex justify-content-between align-items-center" style="padding: 0rem 1rem;">
     <div class="text-dark small fw-semibold">
       <i class="fas fa-envelope me-2 "></i> dmraihan0007@gmail.com
       <span class="mx-3">|</span>
@@ -40,7 +41,7 @@
 
 <!-- Main Navbar -->
 <nav class="navbar-secound">
-  <div class="row-secound">
+  <div class="row-secound container">
     <div class="logo">DM 007</div>
 
     <ul class="nav-links" id="navLinks">
@@ -52,7 +53,7 @@
 
     <div class="d-flex gap-4 align-items-center action-buttons">
       <button type="button" class="btn btn-outline-primary desktop-only">Contact</button>
-      <button type="button" class="btn btn-primary desktop-only">Ready Project</button>
+      <button type="button" class="btn  desktop-only btn-one">Ready Project</button>
 
       <a href="#" class="text-dark mobile-only"><i class="fa-brands fa-square-youtube"></i></a>
       <a href="#" class="text-dark mobile-only"><i class="fa-brands fa-telegram"></i></a>
@@ -64,30 +65,40 @@
     </div>
   </div>
 </nav>
+<!--  style="max-width: 50%; min-width: 300px;" -->
 
 <!-- Hero Section -->
-<section class="hero-fullscreen container-1220 d-flex justify-content-between align-items-center">
-  <div class="hero-left" style="max-width: 50%; min-width: 300px;">
-    <p class="text-primary fw-semibold mb-2">Hello there!</p>
-    <h1 class="display-3 fw-bold mb-3">DM RAIHAN</h1>
-    <h4 class="mb-4">
-      I am a
-      <span id="typing-text" style="color: #007bff; font-weight: 600;"></span>
-      <span class="typing-cursor">|</span>
-    </h4>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non deleniti error fugit tempora quos quis ullam, eaque corrupti veniam id saepe hic molestias, dolores quidem facere quod labore neque aliquam?</p>
+<section class="hero-fullscreen container d-flex justify-content-between align-items-center">
+  <div class="hero-left" style="max-width: 60%;">
+   <div class="">
+  <p class="fs-5 text-secondary mb-2">Hey, This is</p>
+
+  <h1 class="display-1 fw-bold text-dark mb-3">DM RAIHAN</h1>
+
+  <h2 class="h4 d-flex align-items-center mb-4">
+    I’m a
+    <span id="typing" class=" text-dark px-2 py-1  rounded ms-2" style="background-color: #F5C529; font-size: 18px;">|</span>
+  </h2>
+
+  <p class="fs-5 text-secondary">
+    With a keen eye for detail and a passion for crafting responsive, high-performance websites that provide seamless user experiences.
+    With a keen eye for detail and a passion for crafting responsive, high-performance websites that provide seamless user experiences.
+ 
+  </p>
+</div>
+
     <a href="#services" class="btn border border-dark btn-md">Recent Work</a>
-    <a href="#services" class="btn btn-primary btn-md">YouTube Tutorial</a>
+    <a href="#services" class="btn  btn-md btn-one">YouTube Tutorial</a>
   </div>
 
   <div class="hero-right" style="max-width: 30%; min-width: 250px;">
     <img src="img/dp.png" alt="DM RAIHAN" class="img-fluid rounded" />
   </div>
   <!-- Carousel -->
-<div class="carousel-container" style="background-color: #0B87D7;">
+<div class="carousel-container">
   <div class="carousel-track-wrapper">
     <div class="carousel-track">
-      <div class="tech-icon"><i class="fab fa-html5"></i><span>HTML</span></div>
+      <div class="tech-icon"><i class="fab fa-html5"></i><span >HTML</span></div>
       <div class="tech-icon"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
       <div class="tech-icon"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
       <div class="tech-icon"><i class="fab fa-react"></i><span>React</span></div>
@@ -101,7 +112,7 @@
       <div class="tech-icon"><i class="fab fa-github"></i><span>GitHub</span></div>
     </div>
 
-    <!-- Duplicate for loop effect -->
+   
     <div class="carousel-track">
       <div class="tech-icon"><i class="fab fa-html5"></i><span>HTML</span></div>
       <div class="tech-icon"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
@@ -118,10 +129,183 @@
     </div>
   </div>
 </div>
+</section>
+</div>
 
+<!-- <section class="banner py-5 mt-2">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-12 col-md-6">
+        <div class="card custom-banner position-relative overflow-hidden border-0">
+          <img src="img/s1.jpg" alt="" class="img-fluid w-100 h-100" style="object-fit: cover;">
+          <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, provident.
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="card custom-banner position-relative overflow-hidden border-0">
+          <img src="img/s1.jpg" alt="" class="img-fluid w-100 h-100" style="object-fit: cover;">
+          <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, provident.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="banner py-5 mt-2">
+  <div class="container">
+
+    <!-- Desktop Carousel (2 cards per slide) -->
+    <div id="desktopCarousel" class="carousel slide d-none d-md-block" data-bs-ride="carousel" data-bs-interval="4000">
+      <div class="carousel-indicators mb-3">
+        <button type="button" data-bs-target="#desktopCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#desktopCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#desktopCarousel" data-bs-slide-to="2"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="card custom-banner position-relative overflow-hidden border-0">
+                <img src="img/s1.jpg" class="w-100 h-100" style="object-fit:cover;" alt="Card 1">
+                <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+                  Slide 1 Card 1
+                </p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card custom-banner position-relative overflow-hidden border-0">
+                <img src="img/s1.jpg" class="w-100 h-100" style="object-fit:cover;" alt="Card 2">
+                <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+                  Slide 1 Card 2
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="card custom-banner position-relative overflow-hidden border-0">
+                <img src="img/s1.jpg" class="w-100 h-100" style="object-fit:cover;" alt="Card 3">
+                <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+                  Slide 2 Card 1
+                </p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card custom-banner position-relative overflow-hidden border-0">
+                <img src="img/s1.jpg" class="w-100 h-100" style="object-fit:cover;" alt="Card 4">
+                <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+                  Slide 2 Card 2
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="card custom-banner position-relative overflow-hidden border-0">
+                <img src="img/s1.jpg" class="w-100 h-100" style="object-fit:cover;" alt="Card 5">
+                <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+                  Slide 3 Card 1
+                </p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card custom-banner position-relative overflow-hidden border-0">
+                <img src="img/s1.jpg" class="w-100 h-100" style="object-fit:cover;" alt="Card 6">
+                <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+                  Slide 3 Card 2
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Carousel (1 card per slide) -->
+    <div id="mobileCarousel" class="carousel slide d-block d-md-none" data-bs-ride="carousel" data-bs-interval="4000">
+      <div class="carousel-indicators mb-3">
+        <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="3"></button>
+        <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="4"></button>
+        <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="5"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card custom-banner position-relative overflow-hidden border-0">
+            <img src="img/s1.jpg" class="w-100 h-100" style="object-fit:cover;" alt="Card 1">
+            <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+              Slide 1 Card 1
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card custom-banner position-relative overflow-hidden border-0">
+            <img src="img/s1.jpg" class="w-100 h-100" style="object-fit:cover;" alt="Card 2">
+            <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+              Slide 1 Card 2
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card custom-banner position-relative overflow-hidden border-0">
+            <img src="img/s1.jpg" class="w-100 h-100" style="object-fit:cover;" alt="Card 3">
+            <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+              Slide 2 Card 1
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card custom-banner position-relative overflow-hidden border-0">
+            <img src="img/s1.jpg" class="w-100 h-100" style="object-fit:cover;" alt="Card 4">
+            <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+              Slide 2 Card 2
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card custom-banner position-relative overflow-hidden border-0">
+            <img src="img/s1.jpg" class="w-100 h-100" style="object-fit:cover;" alt="Card 5">
+            <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+              Slide 3 Card 1
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card custom-banner position-relative overflow-hidden border-0">
+            <img src="img/s1.jpg" class="w-100 h-100" style="object-fit:cover;" alt="Card 6">
+            <p class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+              Slide 3 Card 2
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-</div>
+
+
+
+
+
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>

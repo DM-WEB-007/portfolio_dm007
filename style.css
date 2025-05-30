@@ -1,35 +1,44 @@
 :root{
   --main-color:#E5F5FF;
+  --secound-color:#74BEED;
+  --btn-one:#0B87D7;
 }
 
 
 /* Container with max-width 1220px, centered and responsive */
-.container-1220 {
-  max-width: 1220px;
+/* .container-1220 {
+  max-width: 1300px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
   box-sizing: border-box;
-}
+} */
 
 /* Basic page and layout styles */
 html, body {
-  height: 100%;
-  margin: 0;
-  overflow: hidden; /* no page scroll */
+
   background: #E5F5FF;
+}
+.btn-one{
+  background-color: var(--btn-one);
+  color:#fff;
+  transition: 0.3s;
+}
+.btn-one:hover{
+  color:#fff;
+  background-color: #004D7E;
 }
 .icons{
   font-size: 18px;
 }
-
+/* 
 .page-container {
   height: 100vh;
   display: flex;
   flex-direction: column;
-}
+} */
 
 /* Top navbar: full width background, content constrained */
 .top-navbar {
@@ -46,146 +55,15 @@ html, body {
 }
 
 
-/* Mobile / small screens: stack vertically, image on top */
-/* Default (desktop) */
-.hero-fullscreen {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 90vh;
-  padding: 2rem 1rem;
-}
-
-  .typing-cursor {
-    display: inline-block;
-    animation: blink 0.7s infinite;
-  }
-
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-  }
-
-@media (max-width: 768px) {
-  .hero-fullscreen {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 1rem;
-    min-height: 80vh;
-    text-align: center;
-  }
-
-  .hero-left {
-    max-width: 100%;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-right {
-    order: -1;
-    max-width: 220px;
-    width: 100%;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-right img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-
-
-
-/* Carousel container - responsive width, centered, pinned bottom */
-.carousel-container {
-
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  padding: 10px 0;
-  background-color: transparent;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 3;
-}
-
-/* Carousel track wrapper - double width for looping */
-.carousel-track-wrapper {
-  display: flex;
-  width: 200%;
-  animation: scroll-left 20s linear infinite;
-}
-
-/* Each track flex and icons spaced */
-.carousel-track {
-  display: flex;
-  flex: 1;
-  justify-content: space-around;
-  align-items: center;
-}
-
-/* Carousel icons styling */
-.carousel-track i {
-  font-size: 1.8rem;
-  margin: 0 20px;
-  color: #000;
-}
-
-/* Animation to scroll carousel from left to right */
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .carousel-track i {
-    font-size: 1.4rem;
-    margin: 0 12px;
-  }
-}
-
-@media (max-width: 576px) {
-  .carousel-track i {
-    font-size: 1.2rem;
-    margin: 0 8px;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .navbar-secound {
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .row-secound {
-  max-width: 1220px;
+  /* max-width: 1220px; */
   margin: 0 auto;
-  padding: 0.75rem 1rem;
+  padding: 1rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -194,7 +72,7 @@ html, body {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #007bff;
+  color: var(--btn-one);
 }
 
 .nav-links {
@@ -283,3 +161,185 @@ html, body {
 
 
 
+
+
+
+/* Mobile / small screens: stack vertically, image on top */
+/* Default (desktop) */
+.hero-fullscreen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem 1rem;
+}
+
+    #typing::after {
+      content: "|";
+      animation: blink 0.7s infinite;
+      margin-left: 2px;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+
+
+@media (max-width: 768px) {
+  .hero-fullscreen {
+    flex-direction: column;
+
+  }
+   .hero-left{
+    max-width: 100% !important;
+  }
+
+  .hero-right {
+    order: -1;
+
+  }
+
+  .hero-right img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+ 
+}
+
+
+
+
+
+
+/* Carousel container - responsive width, centered, pinned bottom */
+.carousel-container {
+  background-color: var(--secound-color) !important;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  padding: 10px 0;
+  background-color: transparent;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+/* Carousel track wrapper - double width for looping */
+.carousel-track-wrapper {
+  display: flex;
+  width: 200%;
+  animation: scroll-left 20s linear infinite;
+}
+
+/* Each track flex and icons spaced */
+.carousel-track {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Carousel icons styling */
+.carousel-track i {
+  font-size: 1.8rem;
+  margin: 0 20px;
+  color: #000;
+}
+
+/* Animation to scroll carousel from left to right */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .carousel-track i {
+    font-size: 1.4rem;
+    margin: 0 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-track i {
+    font-size: 1.2rem;
+    margin: 0 8px;
+  }
+}
+
+.tech-icon {
+  display: flex;
+  align-items: center;      /* Vertically center icon and text */
+  justify-content: center;  /* Optional: horizontally center within track item */
+  gap: 6px;                 /* Space between icon and text */
+  color: #000;
+  font-size: 1rem;
+}
+.tech-icon i {
+  font-size: 1.8rem;
+}
+
+.tech-icon span {
+  font-size: 0.9rem;
+  color: #000;
+}
+
+
+
+
+
+
+.card {
+  background-color: var(--secound-color);
+}
+
+.card img {
+  padding: 1rem;
+}
+
+.card.custom-banner {
+  height: 250px;
+}
+
+@media (max-width: 768px) {
+  .card.custom-banner {
+    height: 180px;
+  }
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  margin: 0;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #333;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+}
