@@ -227,6 +227,17 @@ html, body {
   z-index: 3;
 }
 
+/* .carousel-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--secound-color) !important;
+  overflow: hidden;
+  padding: 10px 0;
+} */
+
 /* Carousel track wrapper - double width for looping */
 .carousel-track-wrapper {
   display: flex;
@@ -294,25 +305,25 @@ html, body {
 
 
 
-
-.banner{
-  
-}
-.card {
+.banner .card {
   background-color: var(--secound-color);
+  margin-top: 40px;
   
 }
 
-.card img {
-  padding: 1rem;
+.banner .card img {
+  padding: 0.75rem; /* Slightly reduce padding to fit better */
+  height: 100%; /* Ensure image fills card height */
+  object-fit: cover;
 }
+
 
 .card.custom-banner {
-  height: 250px;
+  height: 220px;
 }
 
 @media (max-width: 768px) {
-  .card.custom-banner {
+  .banner .card.custom-banner {
     height: 180px;
   }
 }
@@ -367,5 +378,41 @@ html, body {
     display: block;
     margin: 0 auto;
     max-width: 220px;   /* Absolute limit */
+  }
+}
+
+
+
+
+
+.recent-project .card {
+  background-color: #99A4A6;
+  
+  
+}
+.recent-project .card-body{
+  border-radius:0 0 8px 8px;
+}
+
+.recent-project .card img {
+  padding: 1rem;
+}
+/* Default size on larger screens */
+.custom-btn {
+  border:1px solid #000;
+}
+
+.custom-btn:hover{
+  background-color: var(--btn-one);
+  color:#fff;
+}
+/* Smaller buttons on small screens */
+@media (max-width: 767.98px) {
+  .custom-btn {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    min-width: 90px;
+    height: 28px;
+    line-height: 1.1;
   }
 }
