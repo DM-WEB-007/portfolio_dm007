@@ -555,3 +555,20 @@ html, body {
   background-color: var(--btn-one);
   border-radius: 10px;
 }
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .youtube-section .yt-carousel-slide {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .youtube-section .yt-carousel-slide .card {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .youtube-section .yt-custom-dots {
+    margin-top: 20px;
+  }
+}
