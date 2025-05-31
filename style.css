@@ -469,7 +469,7 @@ html, body {
 .php       { background: #54d1c4; width: clamp(80px, 10vw, 130px); height: clamp(80px, 10vw, 130px); }
 .bootstrap { background: #55cbe8; width: clamp(60px, 8vw, 100px); height: clamp(60px, 8vw, 100px); color: black; }
 .laravel   { background: #529bd6; width: clamp(100px, 12vw, 160px); height: clamp(100px, 12vw, 160px); }
-.logo      { background: #756ae8; width: clamp(40px, 5vw, 80px);  height: clamp(40px, 5vw, 80px);  }
+
 .uiux      { background: #dc5aa0; width: clamp(100px, 12vw, 160px); height: clamp(100px, 12vw, 160px); }
 
 @keyframes bounce {
