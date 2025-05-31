@@ -504,3 +504,54 @@ html, body {
 
 
 
+/* Youtube */
+
+.youtube-section .yt-carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.youtube-section .yt-carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.youtube-section .yt-carousel-slide {
+  flex: 0 0 100%; /* Full width per slide */
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.youtube-section .yt-carousel-slide .card {
+  flex: 1;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.youtube-section .card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Dots */
+.youtube-section .yt-custom-dots .yt-dot {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: var(--btn-one);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.youtube-section .yt-custom-dots .yt-dot.active {
+  width: 30px;
+  background-color: var(--btn-one);
+  border-radius: 10px;
+}
