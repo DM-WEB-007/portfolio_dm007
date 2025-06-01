@@ -1045,3 +1045,54 @@ html, body {
     font-size: 0.8rem;
   }
 }
+
+
+
+
+/* Talk With me */
+
+
+  .icon-wrapper {
+    position: relative;
+  }
+
+  .icon-label {
+    position: absolute;
+    top: 100%;
+    margin-top: 12px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #000;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 13px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+
+  .icon-wrapper:hover .icon-label {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+
+@media (max-width: 768px) {
+  .icon-wrapper a {
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+  }
+
+  .icon-wrapper img {
+    width: 16px;
+    height: 18px;
+  }
+
+  .icon-label {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+}
