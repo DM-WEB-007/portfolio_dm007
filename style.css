@@ -4,18 +4,6 @@
   --btn-one:#0B87D7;
 }
 
-
-/* Container with max-width 1220px, centered and responsive */
-/* .container-1220 {
-  max-width: 1300px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  box-sizing: border-box;
-} */
-
 /* Basic page and layout styles */
 html, body {
 
@@ -33,12 +21,6 @@ html, body {
 .icons{
   font-size: 18px;
 }
-/* 
-.page-container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-} */
 
 /* Top navbar: full width background, content constrained */
 .top-navbar {
@@ -49,15 +31,12 @@ html, body {
 
 /* Main navbar: full width background */
 
-
-
 .navbar-secound {
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .row-secound {
-  /* max-width: 1220px; */
   margin: 0 auto;
   padding: 1rem 1rem;
   display: flex;
@@ -83,6 +62,14 @@ html, body {
   text-decoration: none;
   color: #333;
   font-weight: 500;
+}
+.onlyborder-btn{
+  border:1px solid #120B37;
+}
+.onlyborder-btn:hover{
+  background-color: var(--btn-one);
+  color:#fff;
+  
 }
 
 .hamburger {

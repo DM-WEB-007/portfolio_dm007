@@ -52,7 +52,7 @@
     </ul>
 
     <div class="d-flex gap-4 align-items-center action-buttons">
-      <button type="button" class="btn btn-outline-primary desktop-only">Contact</button>
+      <button type="button" class="btn  desktop-only onlyborder-btn">Contact</button>
       <button type="button" class="btn  desktop-only btn-one">Ready Project</button>
 
       <a href="#" class="text-dark mobile-only"><i class="fa-brands fa-square-youtube"></i></a>
@@ -88,7 +88,7 @@
   </p>
 </div>
 
-    <a href="#services" class="btn border border-dark btn-md">Recent Work</a>
+    <a href="#services" class="btn border border-dark">Recent Work</a>
     <a href="#services" class="btn  btn-md btn-one">YouTube Tutorial</a>
   </div>
 
@@ -301,6 +301,173 @@
 </section>
 
 
+
+  <style>
+    .carousel-scroll {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      cursor: grab;
+      padding-bottom: 10px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .carousel-scroll::-webkit-scrollbar {
+      display: none;
+    }
+    .carousel-scroll:active {
+      cursor: grabbing;
+    }
+
+    .carousel-card-yt {
+      flex: 0 0 33.3333%;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+    @media (max-width: 992px) {
+      .carousel-card-yt {
+        flex: 0 0 50%;
+      }
+    }
+    @media (max-width: 768px) {
+      .carousel-card-yt {
+        flex: 0 0 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container py-5">
+  <div class="carousel-scroll" id="carouselScroll">
+
+    <!-- Cards -->
+    <div class="carousel-card-yt">
+      <div class="card h-100">
+        <img src="img/project1.png" class="card-img-top" alt="Card 1">
+        <div class="card-body">
+          <h5 class="card-title">Card Title 1</h5>
+          <p class="card-text">Card description 1.</p>
+          <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-card-yt">
+      <div class="card h-100">
+        <img src="img/project2.png" class="card-img-top" alt="Card 2">
+        <div class="card-body">
+          <h5 class="card-title">Card Title 2</h5>
+          <p class="card-text">Card description 2.</p>
+          <a href="#" class="btn btn-success">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-card-yt">
+      <div class="card h-100">
+        <img src="img/project3.png" class="card-img-top" alt="Card 3">
+        <div class="card-body">
+          <h5 class="card-title">Card Title 3</h5>
+          <p class="card-text">Card description 3.</p>
+          <a href="#" class="btn btn-danger">Read More</a>
+        </div>
+      </div>
+    </div>  <div class="carousel-card-yt">
+      <div class="card h-100">
+        <img src="img/project3.png" class="card-img-top" alt="Card 3">
+        <div class="card-body">
+          <h5 class="card-title">Card Title 3</h5>
+          <p class="card-text">Card description 3.</p>
+          <a href="#" class="btn btn-danger">Read More</a>
+        </div>
+      </div>
+    </div>  <div class="carousel-card-yt">
+      <div class="card h-100">
+        <img src="img/project3.png" class="card-img-top" alt="Card 3">
+        <div class="card-body">
+          <h5 class="card-title">Card Title 3</h5>
+          <p class="card-text">Card description 3.</p>
+          <a href="#" class="btn btn-danger">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-card-yt">
+      <div class="card h-100">
+        <img src="img/project4.png" class="card-img-top" alt="Card 4">
+        <div class="card-body">
+          <h5 class="card-title">Card Title 4</h5>
+          <p class="card-text">Card description 4.</p>
+          <a href="#" class="btn btn-warning">Read More</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const container = document.getElementById("carouselScroll");
+  let isDragging = false;
+  let startX = 0;
+  let scrollLeft = 0;
+  let dragDistance = 0;
+
+  container.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    startX = e.pageX - container.offsetLeft;
+    scrollLeft = container.scrollLeft;
+    dragDistance = 0;
+  });
+
+  container.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - container.offsetLeft;
+    const move = x - startX;
+    container.scrollLeft = scrollLeft - move;
+    dragDistance = move;
+  });
+
+  container.addEventListener("mouseup", () => {
+    if (isDragging && Math.abs(dragDistance) > 10) {
+      snapToCard(dragDistance);
+    }
+    isDragging = false;
+  });
+
+  container.addEventListener("mouseleave", () => {
+    if (isDragging && Math.abs(dragDistance) > 10) {
+      snapToCard(dragDistance);
+    }
+    isDragging = false;
+  });
+
+  function snapToCard(dragDelta) {
+    const cards = document.querySelectorAll('.carousel-card-yt');
+    if (cards.length === 0) return;
+
+    const cardWidth = cards[0].offsetWidth;
+    const scrollX = container.scrollLeft;
+
+    let index = Math.round(scrollX / cardWidth);
+
+    // Apply directional override based on drag
+    if (Math.abs(dragDelta) > 30) {
+      if (dragDelta > 0) index--; // drag right → previous
+      else index++;               // drag left → next
+    }
+
+    // Clamp index
+    index = Math.max(0, Math.min(index, cards.length - 1));
+
+    container.scrollTo({
+      left: index * cardWidth,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+
+
 <section class="about py-2">
   <div class="container">
     <h1 class="text-center title mb-5">About Me</h1>
@@ -384,7 +551,12 @@
         </div>
       </div>
 
+       <div class="d-flex mt-4 justify-content-center">
+  <button class="btn border-dark">See All of my Work</button>
+</div>
+
     </div>
+    
   </div>
 </div>
 
@@ -408,7 +580,6 @@
 
 
 <!-- Youtube section -->
-
 
 <section class="youtube-section py-5">
   <div class="container">
@@ -553,6 +724,10 @@
       <span class="yt-dot" data-slide="1"></span>
       <span class="yt-dot" data-slide="2"></span>
     </div>
+    <div class="d-flex mt-2 justify-content-center">
+  <button class="btn border-dark">See All of my Work</button>
+</div>
+
   </div>
 </section>
 <script>
@@ -592,7 +767,6 @@
 
 
 <!-- Team -->
-
 
 <section class="team-section">
   <div class="container">
@@ -891,6 +1065,7 @@ for(let i= 0; i<imgbx.length; i++){
 
 
 
+<!-- Footer -->
 
 <footer class="bg-dark text-white pt-4 pb-3 mt-5">
   <div class="container">

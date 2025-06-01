@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Content Width 1220px</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="allproject.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body>
+<!-- Main Navbar -->
+<nav class="navbar-secound">
+  <div class="row-secound container">
+    <div class="logo">DM 007</div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="d-flex gap-4 align-items-center action-buttons">
+      <button type="button" class="btn btn-outline-primary desktop-only">Contact</button>
+      <button type="button" class="btn  desktop-only btn-one">Ready Project</button>
+
+      <a href="#" class="text-dark mobile-only"><i class="fa-brands fa-square-youtube"></i></a>
+      <a href="#" class="text-dark mobile-only"><i class="fa-brands fa-telegram"></i></a>
+      <a href="#" class="text-dark mobile-only icons-img"><img src="img/logo.png" alt=""></a>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars" id="menu-icon"></i>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- card -->
+
+<main>
+  <div class="container my-3">
+    <h3>My Project</h3>
+    <div class="row gy-2">
+      <!-- Card 1 -->
+      <div class="col-12 ">
+        <div class="card p-3">
+          <div class="d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap">
+            <!-- Left Image -->
+          <div class="me-3 mb-3 mb-md-0 text-center">
+          <!-- Main Image -->
+          <img id="mainImage" src="allproject/1img1.png" alt="Product 1"
+              class="product-img rounded mb-2"
+              style="width: 420px; height: 130px; object-fit: cover;">
+
+                      <!-- Thumbnail Images -->
+              <div class="d-flex justify-content-center gap-2">
+                <img src="allproject/1img1.png" class="thumb-img rounded border"
+                    style="width: 50px; height: 30px; cursor: pointer;" onclick="changeImage(this)">
+                <img src="allproject/1img2.png" class="thumb-img rounded border"
+                    style="width: 50px; height: 30px; cursor: pointer;" onclick="changeImage(this)">
+                <img src="allproject/1img3.png" class="thumb-img rounded border"
+                    style="width: 50px; height: 30px; cursor: pointer;" onclick="changeImage(this)">
+                <img src="allproject/1img4.png" class="thumb-img rounded border"
+                    style="width: 50px; height: 30px; cursor: pointer;" onclick="changeImage(this)">
+              </div>
+            </div>
+
+            <!-- Middle Content -->
+            <div class="flex-grow-1 text-center px-3 mb-3 mb-md-0">
+              <h3 class="h5 mb-2">Personal Portfolio Website Development</h3>
+              <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, facere quibusdam consequuntur iure molestias ea enim asperiores amet eum? Dignissimos laudantium, beatae vitae sed accusantium ipsa! Error blanditiis, animi atque maxime laborum laboriosam, praesentium vel minus, alias tempora quis modi.</p>
+              <button class="btn btn-primary btn-sm">See Tutorial</button>
+            </div>
+
+            <!-- Vertical Line -->
+            <div class="d-none d-md-block vertical-line"></div>
+
+            <!-- Right Side -->
+           <div class="text-center ms-md-4 right-side">
+            <h4 class="mb-1 text-success">$30</h4>
+            <p class="text-danger mb-2">20% Sale</p>
+            <button class="btn btn-success btn-sm">Buy Now</button>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat for other cards -->
+         <div class="col-12 ">
+        <div class="card p-3">
+          <div class="d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap">
+            <!-- Left Image -->
+          <div class="me-3 mb-3 mb-md-0 text-center">
+          <!-- Main Image -->
+          <img id="mainImage" src="allproject/1img1.png" alt="Product 1"
+              class="product-img rounded mb-2"
+              style="width: 420px; height: 130px; object-fit: cover;">
+
+                      <!-- Thumbnail Images -->
+              <div class="d-flex justify-content-center gap-2">
+                <img src="allproject/1img1.png" class="thumb-img rounded border"
+                    style="width: 50px; height: 30px; cursor: pointer;" onclick="changeImage(this)">
+                <img src="allproject/1img2.png" class="thumb-img rounded border"
+                    style="width: 50px; height: 30px; cursor: pointer;" onclick="changeImage(this)">
+                <img src="allproject/1img3.png" class="thumb-img rounded border"
+                    style="width: 50px; height: 30px; cursor: pointer;" onclick="changeImage(this)">
+                <img src="allproject/1img4.png" class="thumb-img rounded border"
+                    style="width: 50px; height: 30px; cursor: pointer;" onclick="changeImage(this)">
+              </div>
+            </div>
+
+            <!-- Middle Content -->
+            <div class="flex-grow-1 text-center px-3 mb-3 mb-md-0">
+              <h3 class="h5 mb-2">Personal Portfolio Website Development</h3>
+              <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, facere quibusdam consequuntur iure molestias ea enim asperiores amet eum? Dignissimos laudantium, beatae vitae sed accusantium ipsa! Error blanditiis, animi atque maxime laborum laboriosam, praesentium vel minus, alias tempora quis modi.</p>
+              <button class="btn btn-primary btn-sm">See Tutorial</button>
+            </div>
+
+            <!-- Vertical Line -->
+            <div class="d-none d-md-block vertical-line"></div>
+
+            <!-- Right Side -->
+           <div class="text-center ms-md-4 right-side">
+            <h4 class="mb-1 text-success">$30</h4>
+            <p class="text-danger mb-2">20% Sale</p>
+            <button class="btn btn-success btn-sm">Buy Now</button>
+          </div>
+          </div>
+        </div>
+      </div>
+         <div class="col-12 ">
+        <div class="card p-3">
+          <div class="d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap">
+            <!-- Left Image -->
+          <div class="me-3 mb-3 mb-md-0 text-center">
+          <!-- Main Image -->
+          <img id="mainImage" src="allproject/1img1.png" alt="Product 1"
+              class="product-img rounded mb-2"
+              style="width: 420px; height: 130px; object-fit: cover;">
+
+                      <!-- Thumbnail Images -->
+              <div class="d-flex justify-content-center gap-2">
+                <img src="allproject/1img1.png" class="thumb-img rounded border"
+                    style="width: 50px; height: 30px; cursor: pointer;" onclick="changeImage(this)">
+                <img src="allproject/1img2.png" class="thumb-img rounded border"
+                    style="width: 50px; height: 30px; cursor: pointer;" onclick="changeImage(this)">
+                <img src="allproject/1img3.png" class="thumb-img rounded border"
+                    style="width: 50px; height: 30px; cursor: pointer;" onclick="changeImage(this)">
+                <img src="allproject/1img4.png" class="thumb-img rounded border"
+                    style="width: 50px; height: 30px; cursor: pointer;" onclick="changeImage(this)">
+              </div>
+            </div>
+
+            <!-- Middle Content -->
+            <div class="flex-grow-1 text-center px-3 mb-3 mb-md-0">
+              <h3 class="h5 mb-2">Personal Portfolio Website Development</h3>
+              <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, facere quibusdam consequuntur iure molestias ea enim asperiores amet eum? Dignissimos laudantium, beatae vitae sed accusantium ipsa! Error blanditiis, animi atque maxime laborum laboriosam, praesentium vel minus, alias tempora quis modi.</p>
+              <button class="btn btn-primary btn-sm">See Tutorial</button>
+            </div>
+
+            <!-- Vertical Line -->
+            <div class="d-none d-md-block vertical-line"></div>
+
+            <!-- Right Side -->
+           <div class="text-center ms-md-4 right-side">
+            <h4 class="mb-1 text-success">$30</h4>
+            <p class="text-danger mb-2">20% Sale</p>
+            <button class="btn btn-success btn-sm">Buy Now</button>
+          </div>
+          </div>
+        </div>
+      </div>
+
+         <div class="col-12 ">
+        <div class="card p-3">
+          <div class="d-flex align-items-center justify-content-between flex-wrap flex-md-nowrap">
+            <!-- Left Image -->
+          <div class="me-3 mb-3 mb-md-0 text-center">
+          <!-- Main Image -->
+          <img id="mainImage" src="allproject/1img1.png" alt="Product 1"
+              class="product-img rounded mb-2"
+              style="width: 420px; height: 130px; object-fit: cover;">
+
+                      <!-- Thumbnail Images -->
+              <div class="d-flex justify-content-center gap-2">
+                <img src="allproject/1img1.png" class="thumb-img rounded border"
+                    style="width: 50px; height: 30px; cursor: pointer;" onclick="changeImage(this)">
+                <img src="allproject/1img2.png" class="thumb-img rounded border"
+                    style="width: 50px; height: 30px; cursor: pointer;" onclick="changeImage(this)">
+                <img src="allproject/1img3.png" class="thumb-img rounded border"
+                    style="width: 50px; height: 30px; cursor: pointer;" onclick="changeImage(this)">
+                <img src="allproject/1img4.png" class="thumb-img rounded border"
+                    style="width: 50px; height: 30px; cursor: pointer;" onclick="changeImage(this)">
+              </div>
+            </div>
+
+            <!-- Middle Content -->
+            <div class="flex-grow-1 text-center px-3 mb-3 mb-md-0">
+              <h3 class="h5 mb-2">Personal Portfolio Website Development</h3>
+              <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, facere quibusdam consequuntur iure molestias ea enim asperiores amet eum? Dignissimos laudantium, beatae vitae sed accusantium ipsa! Error blanditiis, animi atque maxime laborum laboriosam, praesentium vel minus, alias tempora quis modi.</p>
+              <button class="btn btn-danger btn-sm">See Tutorial</button>
+            </div>
+
+            <!-- Vertical Line -->
+            <div class="d-none d-md-block vertical-line"></div>
+
+            <!-- Right Side -->
+           <div class="text-center ms-md-4 right-side">
+            <h4 class="mb-1 text-success">$30</h4>
+            <p class="text-danger mb-2">20% Sale</p>
+            <button class="btn btn-success btn-sm">Buy Now</button>
+          </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="bg-dark text-white pt-4 pb-3 mt-5">
+  <div class="container">
+    <div class="row text-center text-md-start">
+      <!-- About -->
+      <div class="col-md-4 mb-4">
+        <h5>About Us</h5>
+        <p>We provide quality content and services to our users, focusing on innovation and satisfaction.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="#" class="text-white text-decoration-none">About</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Services</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact + Flag -->
+      <div class="col-md-4 mb-4">
+        <h5>Contact Us</h5>
+        <p>Email: support@example.com</p>
+        <p>Phone: +123 456 7890</p>
+        <p class="d-flex align-items-center justify-content-center justify-content-md-start">
+          <img src="https://flagcdn.com/w40/bd.png" alt="Bangladesh Flag" width="32" height="24" class="me-2">
+          <span>Bangladesh</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="text-center border-top border-light pt-3 mt-3">
+      <p class="mb-0 small">&copy; 2025 Your Company. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  function changeImage(imgElement) {
+    const mainImg = document.getElementById('mainImage');
+    mainImg.src = imgElement.src;
+  }
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

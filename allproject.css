@@ -1,0 +1,26 @@
+    .vertical-line {
+      height: 100px;
+      width: 1px;
+      background-color: #ccc;
+    }
+
+  
+.card {
+  height: 200px;
+  overflow: hidden;
+}
+.right-side {
+  width: 20%;
+  min-width: 130px; /* Optional: prevent cramping on small screens */
+}
+
+.flex-grow-1 {
+  width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .right-side {
+    width: 100%; /* Stack full width on small devices */
+    margin-top: 1rem;
+  }
+}
